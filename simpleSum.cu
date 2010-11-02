@@ -37,5 +37,7 @@ int main()
     CUDA_SAFE_CALL(cudaMemcpy(sum, pSum, SIZE, cudaMemcpyDeviceToHost));
 
     printf("A: %d\nB: %d\nSum: %d\n", aa[0], bb[0], sum[0]);
+    cudaError_t ERR cudaGetLastError();
+	printf("Status: %s\n", cudaGetErrorString (ERR));
     return 0;
 }
