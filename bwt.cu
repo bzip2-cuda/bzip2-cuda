@@ -1,7 +1,75 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "bitonic_kernel.cu"
+//#include "bitonic_kernel.cu"
+
+#define NUM    5
+
+__device__ inline void swap(int & a, int & b)
+{
+	// Alternative swap doesn't use a temporary register:
+	// a ^= b;
+	// b ^= a;
+	// a ^= b;
+	
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+
+__global__ static void bitonicSort(int * values)
+{
+    extern __shared__ int shared[];
+
+    const int tid = threadIdx.x;
+
+    // Copy input to shared mem.
+    shared[tid] = values[tid];
+
+    __syncthreads();
+
+    // Parallel bitonic sort.
+    for (int k = 2; k <= NUM; k *= 2)
+    {
+        // Bitonic merge:
+        for (int j = k / 2; j>0; j /= 2)
+        {
+            int ixj = tid ^ j;
+            
+            if (ixj > tid)
+            {
+                if ((tid & k) == 0)
+                {
+                    if (shared[tid] > shared[ixj])
+                    {
+                        //swap(shared[tid], shared[ixj]);
+                        int tmp = shared[tid];
+    					shared[tid] = shared[ixj];
+					    shared[ixj] = tmp;
+                    }
+                }
+                else
+                {
+                    if (shared[tid] < shared[ixj])
+                    {
+                        //swap(shared[tid], shared[ixj]);
+                        int tmp = shared[tid];
+    					shared[tid] = shared[ixj];
+					    shared[ixj] = tmp;
+                    }
+                }
+            }
+            
+            __syncthreads();
+        }
+    }
+    
+    // Write result.
+    values[tid] = shared[tid];
+    
+//    values[tid] = 0;
+}
+
 
 void output(int val[], int n)
 {

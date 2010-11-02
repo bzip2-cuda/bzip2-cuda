@@ -75,14 +75,20 @@ __global__ static void bitonicSort(int * values)
                 {
                     if (shared[tid] > shared[ixj])
                     {
-                        swap(shared[tid], shared[ixj]);
+                        //swap(shared[tid], shared[ixj]);
+                        int tmp = shared[tid];
+    					shared[tid] = shared[ixj];
+					    shared[ixj] = tmp;
                     }
                 }
                 else
                 {
                     if (shared[tid] < shared[ixj])
                     {
-                        swap(shared[tid], shared[ixj]);
+                        //swap(shared[tid], shared[ixj]);
+                        int tmp = shared[tid];
+    					shared[tid] = shared[ixj];
+					    shared[ixj] = tmp;
                     }
                 }
             }
@@ -90,9 +96,11 @@ __global__ static void bitonicSort(int * values)
             __syncthreads();
         }
     }
-
+    
     // Write result.
     values[tid] = shared[tid];
+    
+    values[tid] = 0;
 }
 
 #endif // _BITONIC_KERNEL_H_
