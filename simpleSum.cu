@@ -8,7 +8,7 @@ __global__ void fnKern(int *pA, int *pB, int *pSum)
 
 int main()
 {
-    const int N = 512;
+    const int N = 32;
     int SIZE = N * sizeof(float);
     int a[N], b[N], sum[N], aa[N], bb[N];
 
@@ -37,7 +37,5 @@ int main()
     CUDA_SAFE_CALL(cudaMemcpy(sum, pSum, SIZE, cudaMemcpyDeviceToHost));
 
     printf("A: %d\nB: %d\nSum: %d\n", aa[0], bb[0], sum[0]);
-    cudaError_t ERR cudaGetLastError();
-	printf("Status: %s\n", cudaGetErrorString (ERR));
     return 0;
 }

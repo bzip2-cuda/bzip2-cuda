@@ -100,7 +100,8 @@ __global__ static void bitonicSort(int * values)
     // Write result.
     values[tid] = shared[tid];
     
-    values[tid] = 0;
+   // values[tid] = tid;
+
 }
 
 #endif // _BITONIC_KERNEL_H_
