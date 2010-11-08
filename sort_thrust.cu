@@ -17,6 +17,7 @@ return string[value[tid]-1]
 #include <thrust/fill.h>
 
 #include <iostream>
+#include <string.h>
 
 #define N 10
 #define ARGC_EXPECTED_VAL 2
@@ -36,7 +37,9 @@ int main(int argc, char *argv[])
 	thrust::device_vector<char> keyD(N, ' ');			//Size N, initialized with ' 's
 	thrust::device_vector<char> strD(N, ' ');			//Size N, initialized with ' 's
 	thrust::host_vector<char> keyH(N, ' ');				//The string to be sorted is taken from the command line
-//	thrust::fill(keyH, keyH + N, argv[1]);
+//	keyH = argv[1];
+//	thrust::fill(keyH.begin(), keyH.end(), argv[1]);
+	thrust::copy(argv[1], strlen(argv[1]), keyH.begin());
 	thrust::copy(keyH.begin(), keyH.end(), keyD.begin());		//Copy the contents of keyH to keyD
 
 	thrust::device_vector<int> valueD(N, 0);			//Size N, filled with 0s
