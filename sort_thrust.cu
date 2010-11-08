@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	thrust::device_vector<int> valueD(N, 0);			//Size N, filled with 0s
 	thrust::host_vector<int>valueH(N, 0);				//Host variable of size N
 	thrust::sequence(valueD.begin(), valueD.end());			//set valueD's values to a sequence from 0 to N-1
-//	thrust::host_vector<int> valueH(valueD.begin(), valueD.end());
+//	thrust::host_vector<int> valueH(valueD.begin(), valueD.end());  //commented out due to lack of necessity :D
 //	thrust::stable_sort_by_key(keyD.begin(), keyD.end(), valueD);
 
 	//ANIRUDH IS CONFUSED FROM HERE ON
