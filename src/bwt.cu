@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "bitonic_kernel.cu"
+#include "../lib/bitonic_kernel.cu"
 
 void output(int val[], int n)
 {
