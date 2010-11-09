@@ -47,12 +47,12 @@ int main(int argc, char *argv[])
 	thrust::host_vector<int>valueH(N, 0);				//Host variable of size N
 	thrust::sequence(valueD.begin(), valueD.end());			//set valueD's values to a sequence from 0 to N-1
 //	thrust::host_vector<int> valueH(valueD.begin(), valueD.end());
-//	thrust::stable_sort_by_key(keyD.begin(), keyD.end(), valueD);
+	thrust::stable_sort_by_key(keyD.begin(), keyD.end(), valueD.begin());
 
 	//ANIRUDH IS CONFUSED FROM HERE ON
 	thrust::copy(valueD.begin(), valueD.end(), valueH.begin());	//Copy sorted values to host
 	thrust::copy(valueH.begin(), valueH.end(), valueD.begin());	//Copy sorted values to device
 	thrust::copy(keyH.begin(), keyH.end(), keyD.begin());		//Copy string to device
-//	fnKern<<<1, N>>>(keyD, valueD, strD);
+	fnKern<<<1, N>>>(keyD.begin(), valueD.begin(), strD.begin());
 	return 0;
 }
