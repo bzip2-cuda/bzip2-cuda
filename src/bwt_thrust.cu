@@ -19,6 +19,7 @@ return string[value[tid]-1]
 
 #include<cuda.h>
 
+#include <stdio.h>
 #include <iostream>
 #include <cstring>
 
@@ -63,7 +64,9 @@ int main(int argc, char *argv[])
 	
 	fnKern<<<1, N>>>(key, val, str);
 	
-	//Insert vanilla code for reading the output here
+	char *strH = new(char);		
+	strH = thrust::raw_pointer_cast(strD);	
+	std::cout << strH;
 
 	cudaFree(key);
 	cudaFree(str);
