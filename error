@@ -1,4 +1,0 @@
-sort_thrust.cu(42): error: no instance of function template "thrust::copy" matches the argument list
-            argument types are: (char *, size_t, thrust::detail::normal_iterator<char *>)
-
-1 error detected in the compilation of "/tmp/tmpxft_00001aa9_00000000-4_sort_thrust.cpp1.ii".

@@ -6,14 +6,12 @@
 #include <thrust/sort.h>
 #include <thrust/fill.h>
 
-#include<cuda.h>
+#include <cuda.h>
 
 #include <stdio.h>
 #include <iostream>
 #include <cstring>
 
-
-// Refer http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
 int main(int argc, char *argv[])
 {
 	char *word = new(char);
