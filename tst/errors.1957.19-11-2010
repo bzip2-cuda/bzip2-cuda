@@ -1,0 +1,22 @@
+string_sort_try0.cu(112): error: identifier "vector" is undefined
+
+string_sort_try0.cu(112): error: type name is not allowed
+
+string_sort_try0.cu(112): error: identifier "h_vec" is undefined
+
+string_sort_try0.cu(122): error: identifier "endl" is undefined
+
+string_sort_try0.cu(128): error: type name is not allowed
+
+string_sort_try0.cu(128): error: the global scope has no "iterator"
+
+string_sort_try0.cu(128): error: expected a ";"
+
+string_sort_try0.cu(128): error: identifier "iter" is undefined
+
+string_sort_try0.cu(140): error: no operator "=" matches these operands
+            operand types are: std::string = thrust::device_reference<device_string>
+
+string_sort_try0.cu(141): error: identifier "endl" is undefined
+
+10 errors detected in the compilation of "/tmp/tmpxft_00006c49_00000000-4_string_sort_try0.cpp1.ii".
