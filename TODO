@@ -1,5 +1,7 @@
 http://www.bzip.org/1.0.3/html/misc.html suggests a lot of changes to the bzip2, and to a lesser extent, so does http://en.wikipedia.org/wiki/Bzip2#Compression_stack . In any case, there are some things we can do.
 
+CURRENT: tst/string_sort.cu from http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
+
 0. Forget about RLE.
 1. Find "the original Burrows-Wheeler technical report (SRC-124)" because "algorithm steps Q6a and Q6b" in it tell us "how repeats can be handled without difficulty in block sorting".
 2. Checksum for verifying data. Use Adler-32 checksum.
