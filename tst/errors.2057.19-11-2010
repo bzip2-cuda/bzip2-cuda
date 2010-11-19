@@ -1,0 +1,4 @@
+string_sort_try0.cu(142): error: no operator "=" matches these operands
+            operand types are: std::string = thrust::device_reference<device_string>
+
+1 error detected in the compilation of "/tmp/tmpxft_00002039_00000000-4_string_sort_try0.cpp1.ii".

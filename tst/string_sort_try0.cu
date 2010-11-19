@@ -13,9 +13,11 @@
 #include <vector>
 #include <iterator>
 
-#include <cuda.h>
+//#include <cuda.h>
 
 #define POOL_SZ (10*1024*1024)
+
+using namespace std;
 
 class device_string
 {
