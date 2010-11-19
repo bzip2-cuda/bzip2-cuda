@@ -3,15 +3,16 @@
 //Taken from http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
 //Also, https://groups.google.com/group/thrust-users/msg/0eac80d2e41cbcfb?pli=1, https://groups.google.com/group/thrust-users/browse_thread/thread/f4b1b825cc927df9?pli=1, 
 
+#include <cstring>
+#include <string>
+#include <vector>
+#include <iterator>
+
 #include <thrust/device_ptr.h>
 #include <thrust/host_vector.h>
 #include <thrust/device_vector.h>
 #include <thrust/sort.h>
 #include <thrust/copy.h>
-
-#include <cstring>
-#include <vector>
-#include <iterator>
 
 //#include <cuda.h>
 
@@ -79,7 +80,7 @@ public:
 	// Conversion operator to copy device_string type to std::string
 	// This is where the problem is
 
-	__host__ operator std::string()
+	__host__ operator std::string(void)
 	{
 		std::string ret;
 		//device_ptr<char*>::iterator it = cstr.begin();
@@ -111,7 +112,7 @@ int main()
 	char* all_repeats_h = "abcb\0bcba\0cbab\0babc";
 	int max_width = 4;
 
-	vector<std::string> h_vec;
+	vector <std::string> h_vec;
 
 	for (int i = 0; i < max_width; i++)
 	{
@@ -136,11 +137,12 @@ int main()
 	thrust::sort(d_vec.begin(), d_vec.end() );
 
 	std::cout << " Done with sort().. \nThe sorted list of conjugates are: \n\n";
+
 	for(int i = 0; i < d_vec.size(); i++)
 	{
-		std::string temp;
-		temp = d_vec[i];
-		std::cout << temp << endl;
+		device_string d_str(d_vec[i]);
+		h_vec[i] = d_str;
+		std::cout << h_vec[i] <<endl;
 	}
 	return 0;
 } 

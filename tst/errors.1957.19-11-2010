@@ -1,22 +1,78 @@
-string_sort_try0.cu(112): error: identifier "vector" is undefined
-
-string_sort_try0.cu(112): error: type name is not allowed
-
-string_sort_try0.cu(112): error: identifier "h_vec" is undefined
-
-string_sort_try0.cu(122): error: identifier "endl" is undefined
-
-string_sort_try0.cu(128): error: type name is not allowed
-
-string_sort_try0.cu(128): error: the global scope has no "iterator"
-
-string_sort_try0.cu(128): error: expected a ";"
-
-string_sort_try0.cu(128): error: identifier "iter" is undefined
-
-string_sort_try0.cu(140): error: no operator "=" matches these operands
-            operand types are: std::string = thrust::device_reference<device_string>
-
-string_sort_try0.cu(141): error: identifier "endl" is undefined
-
-10 errors detected in the compilation of "/tmp/tmpxft_00006c49_00000000-4_string_sort_try0.cpp1.ii".
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/block/merging_sort.h(182): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/block/merging_sort.h(190): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(230): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(230): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(485): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(829): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(843): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(485): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(829): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(843): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
+./string_sort_try0.cu(102): Warning: Cannot tell what pointer points to, assuming global memory space
