@@ -1,5 +1,3 @@
-//#ifndef STRING_SORT_CU
-
 //Taken from http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
 //Also, https://groups.google.com/group/thrust-users/msg/0eac80d2e41cbcfb?pli=1, https://groups.google.com/group/thrust-users/browse_thread/thread/f4b1b825cc927df9?pli=1, 
 
@@ -145,6 +143,4 @@ int main()
 		std::cout << h_vec[i] <<endl;
 	}
 	return 0;
-} 
-
-//#endif
+}

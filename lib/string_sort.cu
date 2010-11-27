@@ -1,8 +1,6 @@
-#ifndef STRING_SORT_CU
-
 //Taken from https://groups.google.com/group/thrust-users/msg/0eac80d2e41cbcfb?pli=1, https://groups.google.com/group/thrust-users/browse_thread/thread/f4b1b825cc927df9?pli=1, http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
 
-//Our thanks to Shashank LASTNAME
+//Our thanks to Shashank Srikant
 
 #include <cstring>
 #include <string>
@@ -15,11 +13,13 @@
 #include <thrust/sort.h>
 #include <thrust/copy.h>
 
-#include "string_sort.h"
-
 #define POOL_SZ (10*1024*1024)
 
+#include "string_sort.h"
+
 using namespace std;
+
+// Sets the variables up the first time its used.
 __host__ static void device_string::init()
 {
 	static bool v = true;
@@ -66,19 +66,15 @@ __host__ __device__ device_string::device_string()
 }
 
 // Conversion operator to copy device_string type to std::string
+// This is where the problem is
 
-__host__ device_string::operator std::string(void) //IS THIS SYNTAX RIGHT?
+__host__ operator device_string::std::string(void)
 {
 	std::string ret;
 	//device_ptr<char*>::iterator it = cstr.begin();
 	thrust::copy(cstr, cstr+cstr_len, back_inserter(ret));
 	return ret;
 }
-
-//SHOULD THIS BE COMMENTED OUT?
-char* device_string::pool_raw;
-thrust::device_ptr<char> device_string::pool_cstr;
-thrust::device_ptr<char> device_string::pool_top;
 
 // User-defined comparison operator
 bool __device__ operator< (device_string lhs, device_string rhs)
@@ -93,5 +89,3 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 	}
 	return *l < *r;
 }
-
-#endif

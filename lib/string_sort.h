@@ -1,8 +1,9 @@
-#ifndef STRING_SORT_H
+#ifndef STRING_SORT_CU
+#define STRING_SORT_CU
 
 //Taken from https://groups.google.com/group/thrust-users/msg/0eac80d2e41cbcfb?pli=1, https://groups.google.com/group/thrust-users/browse_thread/thread/f4b1b825cc927df9?pli=1, http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
 
-//Our thanks to Shashank LASTNAME
+//Our thanks to Shashank Srikant
 
 #include <cstring>
 #include <string>
@@ -50,10 +51,10 @@ public:
 	__host__ operator std::string(void);
 };
 
-/*
 char* device_string::pool_raw;
 thrust::device_ptr<char> device_string::pool_cstr;
 thrust::device_ptr<char> device_string::pool_top;
-*/
+
+bool __device__ operator< (device_string lhs, device_string rhs);
 
 #endif
