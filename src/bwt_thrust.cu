@@ -1,20 +1,21 @@
-//Taken from http://ldn.linuxfoundation.org/article/c-gpu-and-thrust-strings-gpu
-//Also, https://groups.google.com/group/thrust-users/msg/0eac80d2e41cbcfb?pli=1, https://groups.google.com/group/thrust-users/browse_thread/thread/f4b1b825cc927df9?pli=1, 
-
-#include <thrust/device_ptr.h>
 #include <thrust/host_vector.h>
 #include <thrust/device_vector.h>
-#include <thrust/sort.h>
+#include <thrust/device_ptr.h>
 #include <thrust/copy.h>
+#include <thrust/sequence.h>
+#include <thrust/sort.h>
+#include <thrust/fill.h>
 
+#include <cstdio>
+#include <iostream>
 #include <cstring>
-#include <vector>
 #include <iterator>
 
 #define POOL_SZ (10*1024*1024)
 
 using namespace std;
 
+////////////////////DEVICE_STRING STARTS
 class device_string
 {
 public:
@@ -101,43 +102,50 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 	}
 	return *l < *r;
 }
+////////////////////DEVICE_STRING ENDS
 
-int main()
+int main(int argc, char *argv[])
 {
-	char* all_repeats_h = "abcb\0bcba\0cbab\0babc";
-	int max_width = 4;
-
-	vector <std::string> h_vec;
-
-	for (int i = 0; i < max_width; i++)
+	char *word = new(char);
+	
+	if (argc != 2)
 	{
-		h_vec.push_back(all_repeats_h + i*(max_width+1)*sizeof(char));
+		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
+		exit(1);
 	}
+	
+	strcpy(word, argv[1]);
+	int N = strlen(word) - 1;
+	int i;
 
-	std::cout << "Content of h_vec..\n";
-	for(int i = 0; i<h_vec.size(); i++)
+	char *str, *rot;
+	
+	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
+	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
+	
+	thrust::device_ptr<char> strD(str);
+//	thrust::device_ptr<device_string> rotD(rot);
+	thrust::device_ptr<char> rotD(rot);
+	
+	thrust::copy(word, word + N, strD);
+
+	for (i = 0; i < N; i++)			//Rotations
+	{						//Check indices. 90% wrong. :P
+		thrust::copy(strD + i, strD + N, rotD + (i * N));
+		thrust::copy(strD, strD + i, rotD + (i * N) + (N - i));
+	}
+	
+	//How to sort strings?
+	thrust::sort(rotD, rotD + N);
+
+	for (i = 0; i < N; i++)
 	{
-		std::cout << h_vec[i] << endl;
+		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
+		cout << word <<endl;
 	}
-
-	thrust::device_vector<device_string> d_vec;
-	d_vec.reserve(h_vec.size());
-
-	for(vector<std::string>::iterator iter = h_vec.begin(); iter!=h_vec.end(); ++iter)
-	{
-		device_string d_str(*iter);
-		d_vec.push_back(d_str);
-	}
-
-	thrust::sort(d_vec.begin(), d_vec.end() );
-
-	std::cout << " Done with sort().. \nThe sorted list of conjugates are: \n\n";
-
-	for(int i = 0; i < d_vec.size(); i++)
-	{
-		device_string d_str(d_vec[i]);
-		h_vec[i] = d_str;
-		std::cout << h_vec[i] <<endl;
-	}
+	
+	cudaFree(str);
+	cudaFree(rot);
+	
 	return 0;
 }
