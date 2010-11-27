@@ -5,6 +5,8 @@
 
 //Our thanks to Shashank Srikant
 
+//Not working for now. Temporary fix: Putting all this code into the main .cu file directly.
+
 #include <cstring>
 #include <string>
 #include <vector>
