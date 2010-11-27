@@ -89,8 +89,3 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 	}
 	return *l < *r;
 }
-
-int main()
-{
-	return 0;
-}

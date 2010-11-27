@@ -20,7 +20,7 @@
 
 using namespace std;
 
-class device_string
+extern "C" class device_string
 {
 public:
 	int cstr_len;

@@ -148,4 +148,4 @@ string_sort.cu(75): here
             instantiation of "OutputIterator thrust::copy(InputIterator, InputIterator, OutputIterator) [with InputIterator=<error-type>, OutputIterator=std::back_insert_iterator<std::string>]" 
 string_sort.cu(75): here
 
-17 errors detected in the compilation of "/tmp/tmpxft_00000a94_00000000-4_string_sort.cpp1.ii".
+17 errors detected in the compilation of "/tmp/tmpxft_000048b4_00000000-4_string_sort.cpp1.ii".
