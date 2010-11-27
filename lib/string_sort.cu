@@ -68,7 +68,7 @@ __host__ __device__ device_string::device_string()
 // Conversion operator to copy device_string type to std::string
 // This is where the problem is
 
-__host__ operator device_string::std::string(void)
+__host__ device_string::operator device_string::std::string(void)
 {
 	std::string ret;
 	//device_ptr<char*>::iterator it = cstr.begin();
@@ -88,4 +88,9 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 	++r;
 	}
 	return *l < *r;
+}
+
+int main()
+{
+	return 0;
 }
