@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
 	}
 	
 	strcpy(word, argv[1]);
-	int N = strlen(word) - 1;
+	int N = strlen(word);
 	int i;
 
 	char *str, *rot;
@@ -124,19 +124,32 @@ int main(int argc, char *argv[])
 	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
 	
 	thrust::device_ptr<char> strD(str);
-//	thrust::device_ptr<device_string> rotD(rot);
 	thrust::device_ptr<char> rotD(rot);
 	
 	thrust::copy(word, word + N, strD);
 
-	for (i = 0; i < N; i++)			//Rotations
-	{						//Check indices. 90% wrong. :P
+	//rotation starts
+	for (i = 0; i < N; i++)
+	{
 		thrust::copy(strD + i, strD + N, rotD + (i * N));
 		thrust::copy(strD, strD + i, rotD + (i * N) + (N - i));
 	}
-	
-	//How to sort strings?
-	thrust::sort(rotD, rotD + N);
+	//rotation ends
+
+/*
+	//sort starts
+	thrust::device_vector<device_string> d_vec;
+	d_vec.reserve(sizeof(char) * strlen(word));
+
+	for(vector<std::string>::iterator iter = rotD; iter != rotD + N; ++iter)
+	{
+		device_string d_str(*iter);
+		d_vec.push_back(d_str);
+	}
+
+	thrust::sort(d_vec.begin(), d_vec.end() );
+	//sort ends
+*/
 
 	for (i = 0; i < N; i++)
 	{

@@ -109,7 +109,7 @@ int main()
 
 	vector <std::string> h_vec;
 
-	for (int i = 0; i < max_width; i++)
+	for (int i = 0; i < max_width; i++) //rotation
 	{
 		h_vec.push_back(all_repeats_h + i*(max_width+1)*sizeof(char));
 	}
@@ -129,7 +129,7 @@ int main()
 		d_vec.push_back(d_str);
 	}
 
-	thrust::sort(d_vec.begin(), d_vec.end() );
+	thrust::sort(d_vec.begin(), d_vec.end() ); //sort
 
 	std::cout << " Done with sort().. \nThe sorted list of conjugates are: \n\n";
 
