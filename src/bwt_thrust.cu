@@ -116,9 +116,9 @@ int main(int argc, char *argv[])
 	
 	strcpy(word, argv[1]);
 	int N = strlen(word);
-	int i;
-
 	char *str, *rot;
+	vector<string> h_vec;
+	char *result = new char(N);
 	
 	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
 	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
@@ -128,37 +128,45 @@ int main(int argc, char *argv[])
 	
 	thrust::copy(word, word + N, strD);
 
-	//rotation starts
-	for (i = 0; i < N; i++)
+	////////////////////ROTATION STARTS
+	for (int i = 0; i < N; i++)			//Rotations
 	{
 		thrust::copy(strD + i, strD + N, rotD + (i * N));
 		thrust::copy(strD, strD + i, rotD + (i * N) + (N - i));
 	}
-	//rotation ends
-
-/*
-	//sort starts
+	
+	for (int i = 0; i < N; i++)
+	{
+		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
+		h_vec.push_back(word);
+	}
+	
+	cudaFree(str);
+	cudaFree(rot);
+	
+	////////////////////ROTATION ENDS
+	
+	////////////////////SORT STARTS
 	thrust::device_vector<device_string> d_vec;
-	d_vec.reserve(sizeof(char) * strlen(word));
+	d_vec.reserve(h_vec.size());
 
-	for(vector<std::string>::iterator iter = rotD; iter != rotD + N; ++iter)
+	for(vector<std::string>::iterator iter = h_vec.begin(); iter!=h_vec.end(); ++iter)
 	{
 		device_string d_str(*iter);
 		d_vec.push_back(d_str);
 	}
 
 	thrust::sort(d_vec.begin(), d_vec.end() );
-	//sort ends
-*/
-
-	for (i = 0; i < N; i++)
+	////////////////////SORT ENDS
+	
+	for(int i = 0; i < d_vec.size(); i++)
 	{
-		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
-		cout << word <<endl;
+		device_string d_str(d_vec[i]);
+		h_vec[i] = d_str;
+		//cout << h_vec[i] <<endl;
+		result[i] = h_vec[i][h_vec[i].length()-1];
 	}
-	
-	cudaFree(str);
-	cudaFree(rot);
-	
+	cout << result << endl;
+
 	return 0;
 }
