@@ -146,8 +146,8 @@ void sort(vector<string> *h_vec, char *result)
 	for(int i = 0; i < d_vec.size(); i++)
 	{
 		device_string d_str(d_vec[i]);
-		h_vec[i] = d_str;
-		result[i] = h_vec[i][h_vec[i].length()-1];
+		h_vec->at(i) = d_str;
+		result[i] = (h_vec->at(i)).at(h_vec->at(i).length() - 1);
 	}
 }
 
