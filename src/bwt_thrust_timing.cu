@@ -170,11 +170,11 @@ int main(int argc, char *argv[])
 		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
 		exit(1);
 	}
-	
-	time_t t0, t1;
 
 	char *word = new(char);
 	strcpy(word, argv[1]);
+	
+	time_t t0, t1;
 	
 	t0 = time(NULL);
 	for (int i = 0; i < M; i++)
