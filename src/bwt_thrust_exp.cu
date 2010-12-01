@@ -152,6 +152,19 @@ void sort(vector<string> h_vec, char *result)
 	}
 }
 
+void bwt( char *word)
+{
+	int N = strlen(word);
+	vector<string> h_vec;
+	char *result = new char(N);
+
+	rotate(N, word, h_vec);
+	
+	sort(h_vec, result);	
+	
+	cout << result << endl;
+}
+
 int main(int argc, char *argv[])
 {	
 	if (argc != 2)
@@ -162,15 +175,7 @@ int main(int argc, char *argv[])
 
 	char *word = new(char);	
 	strcpy(word, argv[1]);
-	int N = strlen(word);
-	vector<string> h_vec;
-	char *result = new char(N);
-
-	rotate(N, word, h_vec);
+	bwt(word);
 	
-	sort(h_vec, result);	
-	
-	cout << result << endl;
-
 	return 0;
 }

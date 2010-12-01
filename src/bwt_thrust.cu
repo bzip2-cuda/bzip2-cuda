@@ -170,5 +170,6 @@ int main(int argc, char *argv[])
 	char *word = new(char);
 	strcpy(word, argv[1]);
 	bwt(word);
+	
 	return 0;
 }
