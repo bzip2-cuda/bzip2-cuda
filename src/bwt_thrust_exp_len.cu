@@ -161,14 +161,8 @@ char* bwt(char *word)
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2)
-	{
-		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
-		exit(1);
-	}
-
-	char *word = new(char);
-	strcpy(word, argv[1]);
+	char * word = new char(50);
+	cin >> word;
 	cout << bwt(word) << endl;
 	
 	return 0;
