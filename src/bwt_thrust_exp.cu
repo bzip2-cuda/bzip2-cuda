@@ -147,7 +147,6 @@ void sort(vector<string> *h_vec, char *result)
 	{
 		device_string d_str(d_vec[i]);
 		h_vec[i] = d_str;
-		//cout << h_vec[i] <<endl;
 		result[i] = h_vec[i][h_vec[i].length()-1];
 	}
 }
