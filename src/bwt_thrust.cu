@@ -112,7 +112,7 @@ char* bwt(char *word)
 
 	////////////////////ROTATION STARTS
 	char *str, *rot;
-	cudaMalloc((void**)&str, sizeof(char) * (N));
+	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
 	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
 
 	thrust::device_ptr<char> strD(str);
