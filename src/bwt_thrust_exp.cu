@@ -104,7 +104,7 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 }
 ////////////////////DEVICE_STRING ENDS
 
-void rotate(int N, char *word, vector<string> h_vec)
+void rotate(int N, char *word, vector<string> *h_vec)
 {
 	char *str, *rot;
 	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
@@ -123,19 +123,19 @@ void rotate(int N, char *word, vector<string> h_vec)
 	for (int i = 0; i < N; i++)	//We extract data back from the GPU
 	{
 		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
-		h_vec.push_back(word);
+		h_vec->push_back(word);
 	}
 	
 	cudaFree(str);
 	cudaFree(rot);
 }
 
-void sort(vector<string> h_vec, char *result)
+void sort(vector<string> *h_vec, char *result)
 {
 	thrust::device_vector<device_string> d_vec;
-	d_vec.reserve(h_vec.size());
+	d_vec.reserve(h_vec->size());
 
-	for(vector<std::string>::iterator iter = h_vec.begin(); iter!=h_vec.end(); ++iter)
+	for(vector<std::string>::iterator iter = h_vec->begin(); iter!=h_vec->end(); ++iter)
 	{
 		device_string d_str(*iter);
 		d_vec.push_back(d_str);
@@ -158,9 +158,9 @@ void bwt( char *word)
 	vector<string> h_vec;
 	char *result = new char(N);
 
-	rotate(N, word, h_vec);
+	rotate(N, word, &h_vec);
 	
-	sort(h_vec, result);	
+	sort(&h_vec, result);	
 	
 	cout << result << endl;
 }
