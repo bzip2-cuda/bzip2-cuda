@@ -84,6 +84,7 @@ public:
 		return ret;
 	}
 };
+////////////////////DEVICE_STRING ENDS
 
 char* device_string::pool_raw;
 thrust::device_ptr<char> device_string::pool_cstr;
@@ -102,40 +103,29 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 	}
 	return *l < *r;
 }
-////////////////////DEVICE_STRING ENDS
 
-int main(int argc, char *argv[])
+void bwt(char *word)
 {
-	char *word = new(char);
-
-	if (argc != 2)
-	{
-		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
-		exit(1);
-	}
-
-	strcpy(word, argv[1]);
 	int N = strlen(word);
-	char *str, *rot;
 	vector<string> h_vec;
 	char *result = new char(N);
 
+	////////////////////ROTATION STARTS
+	char *str, *rot;
 	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
 	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
 
 	thrust::device_ptr<char> strD(str);
 	thrust::device_ptr<char> rotD(rot);
-
 	thrust::copy(word, word + N, strD);
 
-	////////////////////ROTATION STARTS
-	for (int i = 0; i < N; i++)			//Rotations
+	for (int i = 0; i < N; i++)	//Rotations take place in this loop
 	{
 		thrust::copy(strD + i, strD + N, rotD + (i * N));
 		thrust::copy(strD, strD + i, rotD + (i * N) + (N - i));
 	}
 
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; i++)	//We copy rotation output here
 	{
 		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
 		h_vec.push_back(word);
@@ -167,6 +157,18 @@ int main(int argc, char *argv[])
 		result[i] = h_vec[i][h_vec[i].length()-1];
 	}
 	cout << result << endl;
+}
 
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
+		exit(1);
+	}
+
+	char *word = new(char);
+	strcpy(word, argv[1]);
+	bwt(word);
 	return 0;
 }
