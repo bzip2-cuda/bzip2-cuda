@@ -104,38 +104,23 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 }
 ////////////////////DEVICE_STRING ENDS
 
-int main(int argc, char *argv[])
+void rotate(int N, char *word, vector<string> h_vec)
 {
-	char *word = new(char);
-	
-	if (argc != 2)
-	{
-		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
-		exit(1);
-	}
-	
-	strcpy(word, argv[1]);
-	int N = strlen(word);
 	char *str, *rot;
-	vector<string> h_vec;
-	char *result = new char(N);
-	
 	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
 	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
-	
+		
 	thrust::device_ptr<char> strD(str);
 	thrust::device_ptr<char> rotD(rot);
-	
 	thrust::copy(word, word + N, strD);
-
-	////////////////////ROTATION STARTS
-	for (int i = 0; i < N; i++)			//Rotations
+	
+	for (int i = 0; i < N; i++)	//Rotations happen in this loop
 	{
 		thrust::copy(strD + i, strD + N, rotD + (i * N));
 		thrust::copy(strD, strD + i, rotD + (i * N) + (N - i));
 	}
 	
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i < N; i++)	//We extract data back from the GPU
 	{
 		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
 		h_vec.push_back(word);
@@ -143,10 +128,10 @@ int main(int argc, char *argv[])
 	
 	cudaFree(str);
 	cudaFree(rot);
-	
-	////////////////////ROTATION ENDS
-	
-	////////////////////SORT STARTS
+}
+
+void sort(vector<string> h_vec, char *result)
+{
 	thrust::device_vector<device_string> d_vec;
 	d_vec.reserve(h_vec.size());
 
@@ -157,7 +142,6 @@ int main(int argc, char *argv[])
 	}
 
 	thrust::sort(d_vec.begin(), d_vec.end() );
-	////////////////////SORT ENDS
 	
 	for(int i = 0; i < d_vec.size(); i++)
 	{
@@ -166,6 +150,26 @@ int main(int argc, char *argv[])
 		//cout << h_vec[i] <<endl;
 		result[i] = h_vec[i][h_vec[i].length()-1];
 	}
+}
+
+int main(int argc, char *argv[])
+{	
+	if (argc != 2)
+	{
+		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
+		exit(1);
+	}
+
+	char *word = new(char);	
+	strcpy(word, argv[1]);
+	int N = strlen(word);
+	vector<string> h_vec;
+	char *result = new char(N);
+
+	rotate(N, word, h_vec);
+	
+	sort(h_vec, result);	
+	
 	cout << result << endl;
 
 	return 0;
