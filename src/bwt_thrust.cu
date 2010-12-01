@@ -107,25 +107,25 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 int main(int argc, char *argv[])
 {
 	char *word = new(char);
-	
+
 	if (argc != 2)
 	{
 		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
 		exit(1);
 	}
-	
+
 	strcpy(word, argv[1]);
 	int N = strlen(word);
 	char *str, *rot;
 	vector<string> h_vec;
 	char *result = new char(N);
-	
+
 	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
 	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
-	
+
 	thrust::device_ptr<char> strD(str);
 	thrust::device_ptr<char> rotD(rot);
-	
+
 	thrust::copy(word, word + N, strD);
 
 	////////////////////ROTATION STARTS
@@ -134,18 +134,18 @@ int main(int argc, char *argv[])
 		thrust::copy(strD + i, strD + N, rotD + (i * N));
 		thrust::copy(strD, strD + i, rotD + (i * N) + (N - i));
 	}
-	
+
 	for (int i = 0; i < N; i++)
 	{
 		cudaMemcpy(word, rot + (i * N), N, cudaMemcpyDeviceToHost);
 		h_vec.push_back(word);
 	}
-	
+
 	cudaFree(str);
 	cudaFree(rot);
-	
+
 	////////////////////ROTATION ENDS
-	
+
 	////////////////////SORT STARTS
 	thrust::device_vector<device_string> d_vec;
 	d_vec.reserve(h_vec.size());
@@ -158,7 +158,7 @@ int main(int argc, char *argv[])
 
 	thrust::sort(d_vec.begin(), d_vec.end() );
 	////////////////////SORT ENDS
-	
+
 	for(int i = 0; i < d_vec.size(); i++)
 	{
 		device_string d_str(d_vec[i]);
