@@ -104,7 +104,7 @@ bool __device__ operator< (device_string lhs, device_string rhs)
 	return *l < *r;
 }
 
-void bwt(char *word)
+char* bwt(char *word)
 {
 	int N = strlen(word);
 	vector<string> h_vec;
@@ -156,7 +156,7 @@ void bwt(char *word)
 		//cout << h_vec[i] <<endl;
 		result[i] = h_vec[i][h_vec[i].length()-1];
 	}
-	cout << result << endl;
+	return result;
 }
 
 int main(int argc, char *argv[])
@@ -169,7 +169,7 @@ int main(int argc, char *argv[])
 
 	char *word = new(char);
 	strcpy(word, argv[1]);
-	bwt(word);
+	cout << bwt(word) << endl;
 	
 	return 0;
 }
