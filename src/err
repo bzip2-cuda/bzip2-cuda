@@ -1,78 +1,220 @@
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/block/merging_sort.h(182): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/block/merging_sort.h(190): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(230): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(230): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(485): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(829): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(843): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(485): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(829): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-/usr/local/cuda/bin//../include/thrust/detail/device/cuda/detail/stable_merge_sort.inl(843): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
-./bwt_thrust.cu(99): Warning: Cannot tell what pointer points to, assuming global memory space
+mtf.cu(21): error: no instance of function template "thrust::generate" matches the argument list
+            argument types are: (thrust::detail::normal_iterator<char *>, thrust::detail::normal_iterator<char *>, void)
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(127): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=int]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=int]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(128): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=int]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=int]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(129): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=int]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=int]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(130): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=int]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=int]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(131): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=int]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=int]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(127): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_traits.inl(91): here
+            instantiation of class "thrust::iterator_traversal<Iterator> [with Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::random_access_traversal_tag>, Else=thrust::iterator_traversal<<error-type>>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(387): here
+            instantiation of class "thrust::detail::eval_if<true, Then, Else> [with Then=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>, Else=thrust::detail::identity_<thrust::use_default>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_adaptor.inl(41): here
+            instantiation of class "thrust::experimental::detail::ia_dflt_help<T, DefaultNullaryFn> [with T=thrust::use_default, DefaultNullaryFn=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/counting_iterator.inl(57): here
+            instantiation of class "thrust::detail::counting_iterator_base<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(128): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_traits.inl(91): here
+            instantiation of class "thrust::iterator_traversal<Iterator> [with Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::random_access_traversal_tag>, Else=thrust::iterator_traversal<<error-type>>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(387): here
+            instantiation of class "thrust::detail::eval_if<true, Then, Else> [with Then=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>, Else=thrust::detail::identity_<thrust::use_default>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_adaptor.inl(41): here
+            instantiation of class "thrust::experimental::detail::ia_dflt_help<T, DefaultNullaryFn> [with T=thrust::use_default, DefaultNullaryFn=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/counting_iterator.inl(57): here
+            instantiation of class "thrust::detail::counting_iterator_base<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(129): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_traits.inl(91): here
+            instantiation of class "thrust::iterator_traversal<Iterator> [with Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::random_access_traversal_tag>, Else=thrust::iterator_traversal<<error-type>>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(387): here
+            instantiation of class "thrust::detail::eval_if<true, Then, Else> [with Then=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>, Else=thrust::detail::identity_<thrust::use_default>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_adaptor.inl(41): here
+            instantiation of class "thrust::experimental::detail::ia_dflt_help<T, DefaultNullaryFn> [with T=thrust::use_default, DefaultNullaryFn=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/counting_iterator.inl(57): here
+            instantiation of class "thrust::detail::counting_iterator_base<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(130): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_traits.inl(91): here
+            instantiation of class "thrust::iterator_traversal<Iterator> [with Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::random_access_traversal_tag>, Else=thrust::iterator_traversal<<error-type>>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(387): here
+            instantiation of class "thrust::detail::eval_if<true, Then, Else> [with Then=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>, Else=thrust::detail::identity_<thrust::use_default>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_adaptor.inl(41): here
+            instantiation of class "thrust::experimental::detail::ia_dflt_help<T, DefaultNullaryFn> [with T=thrust::use_default, DefaultNullaryFn=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/counting_iterator.inl(57): here
+            instantiation of class "thrust::detail::counting_iterator_base<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/include/c++/4.4/bits/stl_iterator_base_types.h(131): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "std::iterator_traits<_Iterator> [with _Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_traits.h(37): here
+            instantiation of class "thrust::iterator_traits<T> [with T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_traits.inl(91): here
+            instantiation of class "thrust::iterator_traversal<Iterator> [with Iterator=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::random_access_traversal_tag>, Else=thrust::iterator_traversal<<error-type>>]" 
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(387): here
+            instantiation of class "thrust::detail::eval_if<true, Then, Else> [with Then=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>, Else=thrust::detail::identity_<thrust::use_default>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_adaptor.inl(41): here
+            instantiation of class "thrust::experimental::detail::ia_dflt_help<T, DefaultNullaryFn> [with T=thrust::use_default, DefaultNullaryFn=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/counting_iterator.inl(57): here
+            instantiation of class "thrust::detail::counting_iterator_base<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::device_space_category_to_traversal<<error-type>>, Else=void]" 
+(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::host_space_category_to_traversal<<error-type>>, Else=thrust::detail::eval_if<false, thrust::detail::device_space_category_to_traversal<<error-type>>, void>]" 
+(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::any_space_category_to_traversal<<error-type>>, Else=thrust::detail::eval_if<false, thrust::detail::host_space_category_to_traversal<<error-type>>, thrust::detail::eval_if<false, thrust::detail::device_space_category_to_traversal<<error-type>>, void>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_category_to_traversal.h(129): here
+            instantiation of class "thrust::detail::category_to_traversal<Category> [with Category=<error-type>]" 
+(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<<error-type>>, Else=thrust::detail::category_to_traversal<<error-type>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_category_to_traversal.h(165): here
+            [ 4 instantiation contexts not shown ]
+            instantiation of class "thrust::experimental::detail::ia_dflt_help<T, DefaultNullaryFn> [with T=thrust::use_default, DefaultNullaryFn=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::random_access_traversal_tag>, thrust::iterator_traversal<<error-type>>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/counting_iterator.inl(57): here
+            instantiation of class "thrust::detail::counting_iterator_base<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): error: name followed by "::" must be a class or namespace name
+          detected during:
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::device_iterator_category_to_backend_space<<error-type>>, Else=void]" 
+(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::host_space_tag>, Else=thrust::detail::eval_if<false, thrust::detail::device_iterator_category_to_backend_space<<error-type>>, void>]" 
+(393): here
+            instantiation of class "thrust::detail::eval_if<false, Then, Else> [with Then=thrust::detail::identity_<thrust::any_space_tag>, Else=thrust::detail::eval_if<false, thrust::detail::identity_<thrust::host_space_tag>, thrust::detail::eval_if<false, thrust::detail::device_iterator_category_to_backend_space<<error-type>>, void>>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_category_to_space.h(43): here
+            instantiation of class "thrust::detail::iterator_category_to_space<Category> [with Category=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/detail/iterator_facade.inl(310): here
+            instantiation of class "thrust::experimental::detail::iterator_facade_category_impl<Space, Traversal, ValueParam, Reference> [with Space=thrust::any_space_tag, Traversal=<error-type>, ValueParam=<error-type>, Reference=const <error-type> &]" 
+(393): here
+            [ 3 instantiation contexts not shown ]
+            instantiation of class "thrust::experimental::iterator_facade<Derived, Pointer, Value, Space, Traversal, Reference, Difference> [with Derived=thrust::counting_iterator<<error-type>, thrust::use_default, thrust::use_default, thrust::use_default>, Pointer=<error-type> *, Value=<error-type>, Space=thrust::any_space_tag, Traversal=<error-type>, Reference=const <error-type> &, Difference=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/iterator_adaptor.h(63): here
+            instantiation of class "thrust::experimental::iterator_adaptor<Derived, Base, Pointer, Value, Space, Traversal, Reference, Difference> [with Derived=thrust::counting_iterator<<error-type>, thrust::use_default, thrust::use_default, thrust::use_default>, Base=<error-type>, Pointer=<error-type> *, Value=<error-type>, Space=thrust::any_space_tag, Traversal=<error-type>, Reference=const <error-type> &, Difference=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/iterator/counting_iterator.h(132): here
+            instantiation of class "thrust::counting_iterator<Incrementable, Space, Traversal, Difference> [with Incrementable=<error-type>, Space=thrust::use_default, Traversal=thrust::use_default, Difference=thrust::use_default]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(82): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+/usr/local/cuda/bin//../include/thrust/detail/sequence.inl(84): error: no instance of overloaded function "thrust::transform" matches the argument list
+            argument types are: (thrust::counting_iterator<<error-type>, thrust::use_default, thrust::use_default, thrust::use_default>, <error-type>, int, thrust::detail::sequence_functor<<error-type>, <error-type>>)
+          detected during:
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
+(37): here
+            instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
+mtf.cu(21): here
+
+14 errors detected in the compilation of "/tmp/tmpxft_00001f85_00000000-4_mtf.cpp1.ii".
