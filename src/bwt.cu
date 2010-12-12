@@ -11,7 +11,7 @@
 #include <cstring>
 #include <iterator>
 
-#include "../lib/string_sort_big.cu"
+#include "../lib/string_sort.cu"
 
 #define POOL_SZ (10*1024*1024)
 

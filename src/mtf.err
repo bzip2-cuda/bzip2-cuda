@@ -1,4 +1,4 @@
-mtf.cu(21): error: no instance of function template "thrust::generate" matches the argument list
+src/mtf.cu(21): error: no instance of function template "thrust::generate" matches the argument list
             argument types are: (thrust::detail::normal_iterator<char *>, thrust::detail::normal_iterator<char *>, void)
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(127): error: name followed by "::" must be a class or namespace name
@@ -8,7 +8,7 @@ mtf.cu(21): error: no instance of function template "thrust::generate" matches t
             instantiation of class "thrust::iterator_traits<T> [with T=int]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(128): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -17,7 +17,7 @@ mtf.cu(21): here
             instantiation of class "thrust::iterator_traits<T> [with T=int]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(129): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -26,7 +26,7 @@ mtf.cu(21): here
             instantiation of class "thrust::iterator_traits<T> [with T=int]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(130): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -35,7 +35,7 @@ mtf.cu(21): here
             instantiation of class "thrust::iterator_traits<T> [with T=int]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(131): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -44,7 +44,7 @@ mtf.cu(21): here
             instantiation of class "thrust::iterator_traits<T> [with T=int]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(36): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(127): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -67,7 +67,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(128): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -90,7 +90,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(129): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -113,7 +113,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(130): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -136,7 +136,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/include/c++/4.4/bits/stl_iterator_base_types.h(131): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -159,7 +159,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -183,7 +183,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/local/cuda/bin//../include/thrust/detail/type_traits.h(393): error: name followed by "::" must be a class or namespace name
           detected during:
@@ -207,7 +207,7 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
 /usr/local/cuda/bin//../include/thrust/detail/sequence.inl(84): error: no instance of overloaded function "thrust::transform" matches the argument list
             argument types are: (thrust::counting_iterator<<error-type>, thrust::use_default, thrust::use_default, thrust::use_default>, <error-type>, int, thrust::detail::sequence_functor<<error-type>, <error-type>>)
@@ -215,6 +215,6 @@ mtf.cu(21): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator, T, T) [with ForwardIterator=int, T=<error-type>]" 
 (37): here
             instantiation of "void thrust::sequence(ForwardIterator, ForwardIterator) [with ForwardIterator=int]" 
-mtf.cu(21): here
+src/mtf.cu(21): here
 
-14 errors detected in the compilation of "/tmp/tmpxft_00001f85_00000000-4_mtf.cpp1.ii".
+14 errors detected in the compilation of "/tmp/tmpxft_00002e90_00000000-4_mtf.cpp1.ii".
