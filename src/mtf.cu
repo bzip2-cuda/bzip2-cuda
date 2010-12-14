@@ -4,7 +4,7 @@
 #include <thrust/copy.h>
 #include <thrust/sequence.h>
 #include <thrust/sort.h>
-#include <thrust/fill.h>
+#include <thrust/find.h>
 
 #include <cstdio>
 #include <iostream>
@@ -21,8 +21,8 @@ void mtf(string word)
 	thrust::device_vector<char> d_list(256);
 	thrust::sequence(d_list.begin(), d_list.begin() + 256);
 	thrust::host_vector<char> list(256);
-
 	int counter, index;
+
 	for (counter = 0; counter < word.length(); counter++)
 	{
 		//Scan for character on cpu
@@ -32,14 +32,12 @@ void mtf(string word)
 			if (word[counter] == list[index])
 				break;
 		}
+
 		//Shifting of the character set in parallel
 		thrust::device_vector<char> temp(256);
 		thrust::copy(d_list.begin(), d_list.begin() + index - 1, temp.begin());
 		thrust::copy(temp.begin(), temp.begin() + index - 1, d_list.begin() + 1);
-/*		for ( ; index != 0; index--)
-		{	
-			list[index] = list[index-1];
-		}*/
+
 		thrust::copy(d_list.begin(), d_list.end(), list.begin());
 		list[0] = word[counter];
 		d_list = list;
