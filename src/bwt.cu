@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 {	
 	if (argc != 2)
 	{
-		cout << "Usage: bwt_thrust STRING_INPUT" << endl;
+		cout << "Usage: bwt.out STRING_INPUT" << endl;
 		exit(1);
 	}
 
