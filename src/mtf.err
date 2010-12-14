@@ -1,0 +1,16 @@
+mtf.cu(31): error: no operator "=" matches these operands
+            operand types are: thrust::device_vector<char, thrust::device_malloc_allocator<char>> = char *
+
+mtf.cu(34): error: expression must have class type
+
+mtf.cu(38): error: no suitable conversion function from "thrust::device_vector<char, thrust::device_malloc_allocator<char>>" to "char *" exists
+
+mtf.cu(38): error: no suitable conversion function from "thrust::device_reference<char>" to "char *" exists
+
+mtf.cu(38): error: no suitable conversion function from "thrust::device_vector<int, thrust::device_malloc_allocator<int>>" to "int *" exists
+
+mtf.cu(55): error: expression must have class type
+
+mtf.cu(70): error: expected a ")"
+
+7 errors detected in the compilation of "/tmp/tmpxft_00000a4e_00000000-4_mtf.cpp1.ii".

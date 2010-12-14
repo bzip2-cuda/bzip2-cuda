@@ -19,9 +19,9 @@ int main(int argc, char *argv[])
 
 	char *dStr, *dKey;
 	int *dRes, *hRes;
-	cudaMalloc((void**)dStr, sizeof(char) * strlen(argv[1]));
-	cudaMalloc((void**)dKey, sizeof(char));
-	cudaMalloc((void**)dRes, sizeof(int));
+	cudaMalloc((void**)&dStr, sizeof(char) * strlen(argv[1]));
+	cudaMalloc((void**)&dKey, sizeof(char));
+	cudaMalloc((void**)&dRes, sizeof(int));
 	hRes = new(int);
 	
 	cudaMemcpy(dStr, argv[1], sizeof(char) * strlen(argv[1]), cudaMemcpyHostToDevice);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	
 	cudaMemcpy(hRes, dRes, sizeof(int), cudaMemcpyDeviceToHost);
 	
-	cout << "Result: " << hRes << endl;
+	cout << "Result: " << *hRes << endl;
 	
 	return 0;
 }
