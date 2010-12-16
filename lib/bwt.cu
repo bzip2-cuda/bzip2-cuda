@@ -1,3 +1,5 @@
+#ifndef BWT_CU
+#define BWT_CU
 #include <thrust/host_vector.h>
 #include <thrust/device_vector.h>
 #include <thrust/device_ptr.h>
@@ -11,7 +13,7 @@
 #include <cstring>
 #include <iterator>
 
-#include "../lib/string_sort.cu"
+#include "device_string.cu"
 
 #define POOL_SZ (10*1024*1024)
 
@@ -76,7 +78,7 @@ char* bwt( char *word)
 	
 	return result;
 }
-
+/*
 int main(int argc, char *argv[])
 {	
 	if (argc != 2)
@@ -91,3 +93,5 @@ int main(int argc, char *argv[])
 	
 	return 0;
 }
+*/
+#endif
