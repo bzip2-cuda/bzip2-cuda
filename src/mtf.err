@@ -1,7 +1,4 @@
-mtf.cu(40): error: no suitable conversion function from "thrust::device_vector<char, thrust::device_malloc_allocator<char>>" to "char *" exists
+mtf.cu(31): warning: variable "index" was declared but never referenced
 
-mtf.cu(40): error: no suitable conversion function from "thrust::device_reference<char>" to "char *" exists
+mtf.cu(31): warning: variable "index" was declared but never referenced
 
-mtf.cu(40): error: no suitable conversion function from "thrust::device_vector<int, thrust::device_malloc_allocator<int>>" to "int *" exists
-
-3 errors detected in the compilation of "/tmp/tmpxft_0000123e_00000000-4_mtf.cpp1.ii".
