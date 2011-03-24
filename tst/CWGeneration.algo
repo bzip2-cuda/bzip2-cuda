@@ -1,0 +1,27 @@
+Forall processors Pi (1 ≤ i ≤ n/2)
+	LocalVariable ← CL [i]
+	CL [n – i + 1] ← LocalVariable
+
+P1 sets
+	CCL ← CL [1]
+	CW [1] ← bit string of CCL zeros
+	CDPI ← 1
+
+While (CDPI < n)
+	Forall processors Pi (1 ≤ i ≤ n) do in parallel
+		if (i > CDPI && CL[i] = CCL)
+			CW[i] ← CW [CDPI] + (i - CDPI)
+		if (i < n && CL[i + 1] != CCL)
+			CDPI ← i
+		else be idle
+
+P1 sets
+	CLDiff ← CL [CDPI + 1] – CL [CDPI]
+	CW [CDPI + 1] ← (CW [CDPI] + 1) * 2^ (CLDiff)
+	CCL ← CL [CDPI+1]
+	CDPI ← CDPI + 1
+
+Forall processors Pi (1 ≤ i ≤ n/2)
+	LocalVariable ← CW[i]
+	CW [n – i + 1] ← LocalVariable
+
