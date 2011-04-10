@@ -45,7 +45,7 @@ void mtf(vector<char> word)
 		thrust::copy(temp.begin(), iter - 1, d_list.begin() + 1);
 
 		d_list[0] = d_word[counter];
-		thrust::copy(d_list.begin(), d_list.end(), list.begin());
+	//	thrust::copy(d_list.begin(), d_list.end(), list.begin());
 	}
 	for (counter = 0; counter <= word.size(); counter++)
 	{
