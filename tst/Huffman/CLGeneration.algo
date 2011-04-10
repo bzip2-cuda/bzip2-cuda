@@ -1,0 +1,86 @@
+//Initialisation
+Forall processors Pi (1 ≤ i ≤ n) do in parallel
+	lNodes[i].freq ← F[i]
+	lNodes[i].leader ← -1
+	CL[i] ← 0
+P1 sets
+	iNodesFront ← 0
+	iNodesRear ← 0
+	lNodesCur ← 0
+
+//New iNode
+P1 sets
+	mid ← {∞, ∞, ∞, ∞}
+	if (lNodesCur ≤ n – 1)
+		mid [1] ← lNodes[lNodesCur+1].Freq
+	if (lNodesCur ≤ n – 2)
+		mid [2] ← lNodes[lNodesCur+2].Freq
+	if (iNodesRear > iNodesFront)
+		mid [3] ← iNodes[iNodesFront+1].Freq
+	if (iNodesRear > iNodesFront + 1)
+		mid [4] ← iNodes[iNodesFront+2].Freq
+	SelectMinimums (mid)
+	MinFreq ← mid[1] + mid[2]
+	iNodes [iNodesRear + 1].freq ← MinFreq
+	iNodes [iNodesRear + 1].leader ← -1
+	if (isLeaf (mid[1]))
+		lNodes[lNodesCur+1].leader ← iNodesRear + 1
+		CL[lNodesCur+1]++, lNodesCur++
+	else
+		iNodes[iNodesFront + 1].leader ← iNodesRear + 1
+		iNodesFront++
+	if (isLeaf(mid[2]))
+		lNodes[lNodesCur+1].leader ← iNodesRear + 1
+		CL[lNodesCur+1]++, lNodesCur++
+	else
+		iNodes[iNodesFront + 1].leader ← iNodesRear + 1
+
+//Select Module
+Forall processors Pi (lNodesCur < i ≤ n)
+	if (lNodes[i].freq ≤ MinFreq)
+		Copy[i – lNodesCur].freq ← lNodes[i].freq
+		Copy[i – lNodesCur].index ← i
+		Copy[i – lNodesCur].isLeaf ← true
+		if (i = n || lNodes[i+1].freq > MinFreq)
+			CurLeavesNum ← i – lNodesCur
+
+//Updating iterators
+P1 Sets
+	mergeRear ← iNodesRear
+	mergeFront ← iNodesFront
+	if((CurLeavesNum+ iNodesRear - iNodesFront)%2=0)
+		iNodesFront ← iNodesRear
+	else if ((iNodesRear - iNodesFront != 0) &&
+	(F[lNodesCur+CurLeavesNum]≤iNodes[iNodesRear].freq))
+		mergeRear--
+		iNodesFront ← iNodesRear - 1
+	else
+		iNodesFront ← iNodesRear
+		CurLeavesNum --
+	lNodesCur ← lNodesCur + CurLeavesNum iNodesRear++
+
+//Meld Module
+Forall processors Pi (1 ≤ i ≤ TempLength) do in parallel
+	ind ← iNodesRear + i
+	iNodes [ind].freq ← temp [2*i-1].freq + temp [2*i].freq
+	iNodes[ind].leader ← -1
+	if (temp [2*i-1].isleaf)
+		lNodes [temp [2*i – 1].index].leader ← ind
+		CL[temp [2*i – 1].index]++
+	else
+		iNodes [temp [2*i – 1].index].leader ← ind
+	if (temp [2*i].isleaf)
+		lNodes [temp [2*i].index].leader ← ind
+		CL[temp [2*i ].index]++
+	else
+		iNodes [temp [2*i].index].leader ← ind
+P1 sets
+	iNodesRear ← iNodesRear + (TempLength/2)
+
+
+//Updating leaders
+Forall processors Pi (1 ≤ i ≤ n) do in parallel
+	if (lNodes[i].leader != -1)
+		if (iNodes[lNodes[i].leader].leader != -1)
+			lNodes[i].leader ← iNodes[lNodes[i].leader].leader
+			CL[i] ++
