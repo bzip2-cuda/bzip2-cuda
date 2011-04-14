@@ -32,7 +32,7 @@ void clgeneration()
 	thrust::fill(mid.begin(), mid.end(), 500);
 	if (curr ≤ 255)
 		mid [0] = d_freq[curr+1];
-	if (curr ≤ 254)
+/*	if (curr ≤ 254)
 		mid [1] = d_freq[curr+2];
 	if (rear > front)
 		mid [2] = d_freq[front+1];
@@ -104,6 +104,7 @@ Forall processors Pi (1 ≤ i ≤ n) do in parallel
 		if (iNodes[lNodes[i].leader].leader != -1)
 			lNodes[i].leader ← iNodes[lNodes[i].leader].leader
 			CL[i] ++
+*/
 }
 
 int main()

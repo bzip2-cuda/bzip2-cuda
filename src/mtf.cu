@@ -32,24 +32,29 @@ void mtf(vector<char> word)
 	thrust::device_vector<char>::iterator iter;
 	thrust::host_vector<char> h_word(word.size());
 	char ch;
-/*	h_word = word;
+	h_word = word;
 	d_word = h_word;
-	h_word = d_word;
-*/	thrust::copy(word.begin(), word.end(), d_word.begin());
-	thrust::device_vector<char> temp(256);
+
+	int i;
+
 	for (counter = 0; counter < word.size(); counter++)
 	{
+		thrust::device_vector<char> temp(256);
+		thrust::copy(list.begin(), list.end(), d_list.begin());
 		//Scan for character on cpu
 		iter = thrust::find(d_list.begin(), d_list.end(), d_word[counter]);
+		h_word[0] = d_word[counter];
 
-		//Shifting of the character set in parallel		
-		thrust::copy(d_list.begin(), iter - 1, temp.begin());
-		thrust::copy(temp.begin(), iter - 1, d_list.begin() + 1);
+		//Shifting of the character set in parallel
+	
+		thrust::copy(d_list.begin(), d_list[0] + iter - 1, temp.begin());
+		thrust::copy(temp.begin(), temp.end(), d_list.begin() + 1);
+		d_list[0] = h_word[0];
 
-		d_list[0] = d_word[counter];
 		thrust::copy(d_list.begin(), d_list.end(), list.begin());
 	}
-	for (counter = 0; counter <= word.size(); counter++)
+
+	for (counter = 0; counter < word.size(); counter++)
 	{
 		ch = list[counter];		
 		cout << counter << "\t" << ch << endl;
@@ -65,9 +70,7 @@ int main(int argc, char *argv[])
 	}
 
 	int len = strlen(argv[1]);
-	char *arg = new char(len);
-	strcpy(arg, argv[1]);
-	vector<char> word(arg, arg + sizeof(arg));
+	vector<char> word(argv[1], argv[1] + len);
 	/*while ( *(arg) != '\0' )
 	{
 		word.push_back(*(arg++));
