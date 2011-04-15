@@ -54,11 +54,11 @@ void mtf(vector<char> word)
 		}
 	}
 
-	for (counter = 0; counter < word.size(); counter++)
+/*	for (counter = 0; counter < word.size(); counter++)
 	{
 		ch = list[counter];		
 		cout << counter << "\t" << ch << endl;
-	}
+	}*/
 }
 
 int main(int argc, char *argv[])
@@ -71,11 +71,11 @@ int main(int argc, char *argv[])
 
 	int len = strlen(argv[1]);
 	vector<char> word(argv[1], argv[1] + len);
-//	time_t begin, end;
-//	begin = time(NULL);
+	time_t begin, end;
+	begin = time(NULL);
 	for (int i = 0; i < 10000; i++)
 		mtf(word);
-//	end = time(NULL);
-//	cout <<difftime(end, begin);
+	end = time(NULL);
+	cout <<difftime(end, begin);
 	return 0;
 }
