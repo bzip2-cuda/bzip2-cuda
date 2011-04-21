@@ -11,6 +11,8 @@
 #include <cstring>
 #include <vector>
 
+#include<time.h>
+
 using namespace std;
 
 __global__ void fnSearch(char *str, char *key, int *res)
@@ -84,11 +86,16 @@ int main(int argc, char *argv[])
 
 	int len = strlen(argv[1]);
 	vector<char> word(argv[1], argv[1] + len);
-	time_t begin, end;
-	begin = time(NULL);
-	for (int i = 0; i < 100; i++)
-		mtf(word);
-	end = time(NULL);
-	cout <<"Time taken : " << difftime(end, begin) <<endl;
+	
+	struct timespec t0, t1;
+	struct timespec *pt0, *pt1;
+	pt0 = &t0;
+	pt1 = &t1;
+	
+	clock_gettime(0, pt0);
+	mtf(word);
+	clock_gettime(0, pt1);
+	
+	cout << t1.tv_nsec - t0.tv_nsec << endl;
 	return 0;
 }

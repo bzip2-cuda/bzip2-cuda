@@ -13,7 +13,7 @@
 #include <cstring>
 #include <iterator>
 
-#include "device_string.cu"
+#include "../lib/device_string.cu"
 
 #define POOL_SZ (10*1024*1024)
 
