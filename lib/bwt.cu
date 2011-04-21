@@ -22,8 +22,8 @@ using namespace std;
 void rotate(int N, char *word, vector<string> *h_vec)
 {
 	char *str, *rot;
-	cudaMalloc((void**)&str, sizeof(char) * (N + 1));
-	cudaMalloc((void**)&rot, sizeof(char) * ((N + 1) * (N + 1)));
+	cudaMalloc((void**)&str, /*sizeof(char) * */(N + 1));
+	cudaMalloc((void**)&rot, /*sizeof(char) * */((N + 1) * (N + 1)));
 		
 	thrust::device_ptr<char> strD(str);
 	thrust::device_ptr<char> rotD(rot);
@@ -70,15 +70,15 @@ char* bwt( char *word)
 {
 	int N = strlen(word);
 	vector<string> h_vec;
-	char *result = new char(N);
 
 	rotate(N, word, &h_vec);
-	
+
+	char *result = new char(N);	
 	sort(&h_vec, result);	
 	
 	return result;
 }
-/*
+
 int main(int argc, char *argv[])
 {	
 	if (argc != 2)
@@ -87,11 +87,13 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	char *word = new(char);	
-	strcpy(word, argv[1]);
-	cout << bwt(word) << endl;
-	
+//	char word[256];
+	int N = strlen(argv[1]);
+//	char * word = new char(N);
+//	strncpy(word, bwt(argv[1]), N);	
+//	cout << word << endl;
+	cout << bwt(argv[1]) << endl;	
 	return 0;
 }
-*/
+
 #endif

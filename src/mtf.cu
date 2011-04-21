@@ -54,9 +54,22 @@ void mtf(vector<char> word)
 		}
 	}
 
+	thrust::copy(list.begin(), list.end(), d_list.begin());
+	thrust::copy(word.begin(), word.end(), d_word.begin());
+	for (counter = 0; counter < list.size(); counter++)
+	{
+		iter = thrust::find(d_word.begin(), d_word.end(), d_list[counter]);
+		while (iter != d_word.end())
+		{
+			*iter = counter;
+			iter = thrust::find(d_word.begin(), d_word.end(), d_list[counter]);
+		}
+	}
+	thrust::copy(d_word.begin(), d_word.end(), h_word.begin());
+
 	for (counter = 0; counter < word.size(); counter++)
 	{
-		ch = list[counter];		
+		ch = h_word[counter];		
 		cout << counter << "\t" << ch << endl;
 	}
 }
@@ -73,7 +86,7 @@ int main(int argc, char *argv[])
 	vector<char> word(argv[1], argv[1] + len);
 //	time_t begin, end;
 //	begin = time(NULL);
-	for (int i = 0; i < 10000; i++)
+//	for (int i = 0; i < 10000; i++)
 		mtf(word);
 //	end = time(NULL);
 //	cout <<difftime(end, begin);
